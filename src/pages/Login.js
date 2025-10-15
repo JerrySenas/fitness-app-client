@@ -44,6 +44,7 @@ export default function Login() {
 			retrieveUserDetails(data.access);
 
 			notyf.success('Successful Login');
+			navigate("/workouts")
 		
 		} else if(data.message === "Incorrect email or password") {
 			notyf.error("Incorrect Credentials. Try Again.");
@@ -54,7 +55,6 @@ export default function Login() {
 
 	setEmail('');
 	setPassword('');
-	navigate("/workouts")
 
     }
 
